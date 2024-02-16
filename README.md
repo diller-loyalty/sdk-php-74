@@ -25,7 +25,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "diller-loyalty/php-sdk": "*@dev"
+    "diller-loyalty/php-sdk-74": "*@dev"
   }
 }
 ```
