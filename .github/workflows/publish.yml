@@ -1,0 +1,12 @@
+name: Publish to Packagist
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Update Packagist
+        run: curl -XPOST -H'content-type:application/json' 'https://packagist.org/api/update-package?username=diller&apiToken=${{ secrets.PACKAGIST }}' -d'{"repository":{"url":"https://packagist.org/packages/diller-loyalty/php-sdk-74"}}'
