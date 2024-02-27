@@ -35,16 +35,4 @@ class GtinType
     const ISBN = 'Isbn';
     const UPC_GTIN12 = 'UpcGtin12';
     const EAN_GTIN13 = 'EanGtin13';
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public static function getAllowableEnumValues()
-    {
-        return [
-                self::ISBN,
-                self::UPC_GTIN12,
-                self::EAN_GTIN13
-        ];
-    }
 }

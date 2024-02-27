@@ -36,17 +36,4 @@ class CouponDiscountType
     const PERCENTAGE = 'Percentage';
     const FIXED = 'Fixed';
     const FREE_SHIPPING = 'FreeShipping';
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public static function getAllowableEnumValues()
-    {
-        return [
-                self::NOT_DEFINED,
-                self::PERCENTAGE,
-                self::FIXED,
-                self::FREE_SHIPPING
-        ];
-    }
 }

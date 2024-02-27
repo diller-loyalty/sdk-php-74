@@ -59,7 +59,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
 'origin' => '\DillerAPI\Model\Origin',
 'couponCodes' => 'string[]',
 'stampCardIds' => 'int[]',
-'deductedStampCardIds' => 'int[]',
+'stampCards' => '\DillerAPI\Model\StampCard[]',
 'details' => '\DillerAPI\Model\TransactionDetailRequest[]',
 'departmentId' => 'string'    ];
 
@@ -82,7 +82,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
 'origin' => null,
 'couponCodes' => null,
 'stampCardIds' => 'int32',
-'deductedStampCardIds' => 'int32',
+'stampCards' => null,
 'details' => null,
 'departmentId' => null    ];
 
@@ -126,7 +126,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
 'origin' => 'origin',
 'couponCodes' => 'coupon_codes',
 'stampCardIds' => 'stamp_card_ids',
-'deductedStampCardIds' => 'deducted_stamp_card_ids',
+'stampCards' => 'stamp_cards',
 'details' => 'details',
 'departmentId' => 'department_id'    ];
 
@@ -149,7 +149,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
 'origin' => 'setOrigin',
 'couponCodes' => 'setCouponCodes',
 'stampCardIds' => 'setStampCardIds',
-'deductedStampCardIds' => 'setDeductedStampCardIds',
+'stampCards' => 'setStampCards',
 'details' => 'setDetails',
 'departmentId' => 'setDepartmentId'    ];
 
@@ -172,7 +172,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
 'origin' => 'getOrigin',
 'couponCodes' => 'getCouponCodes',
 'stampCardIds' => 'getStampCardIds',
-'deductedStampCardIds' => 'getDeductedStampCardIds',
+'stampCards' => 'getStampCards',
 'details' => 'getDetails',
 'departmentId' => 'getDepartmentId'    ];
 
@@ -247,7 +247,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
         $this->container['origin'] = isset($data['origin']) ? $data['origin'] : null;
         $this->container['couponCodes'] = isset($data['couponCodes']) ? $data['couponCodes'] : null;
         $this->container['stampCardIds'] = isset($data['stampCardIds']) ? $data['stampCardIds'] : null;
-        $this->container['deductedStampCardIds'] = isset($data['deductedStampCardIds']) ? $data['deductedStampCardIds'] : null;
+        $this->container['stampCards'] = isset($data['stampCards']) ? $data['stampCards'] : null;
         $this->container['details'] = isset($data['details']) ? $data['details'] : null;
         $this->container['departmentId'] = isset($data['departmentId']) ? $data['departmentId'] : null;
     }
@@ -589,25 +589,25 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets deductedStampCardIds
+     * Gets stampCards
      *
-     * @return int[]
+     * @return \DillerAPI\Model\StampCard[]
      */
-    public function getDeductedStampCardIds()
+    public function getStampCards()
     {
-        return $this->container['deductedStampCardIds'];
+        return $this->container['stampCards'];
     }
 
     /**
-     * Sets deductedStampCardIds
+     * Sets stampCards
      *
-     * @param int[] $deductedStampCardIds deductedStampCardIds
+     * @param \DillerAPI\Model\StampCard[] $stampCards stampCards
      *
      * @return $this
      */
-    public function setDeductedStampCardIds($deductedStampCardIds)
+    public function setStampCards($stampCards)
     {
-        $this->container['deductedStampCardIds'] = $deductedStampCardIds;
+        $this->container['stampCards'] = $stampCards;
 
         return $this;
     }

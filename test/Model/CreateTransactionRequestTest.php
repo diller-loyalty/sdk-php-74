@@ -13,7 +13,7 @@
 /**
  * Diller Retailer API
  *
- * The official Diller Retailer API (beta version) <br/> Last Updated: 21-02-2024 14:48
+ * The official Diller Retailer API (beta version) <br/> Last Updated: 27-02-2024 08:24
  *
  * OpenAPI spec version: v2.0
  * 
@@ -169,9 +169,9 @@ class CreateTransactionRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "deductedStampCardIds"
+     * Test attribute "stampCards"
      */
-    public function testPropertyDeductedStampCardIds()
+    public function testPropertyStampCards()
     {
     }
 

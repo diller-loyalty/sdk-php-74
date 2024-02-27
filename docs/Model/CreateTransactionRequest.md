@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **origin** | [**\DillerAPI\Model\Origin**](Origin.md) |  | [optional] 
 **couponCodes** | **string[]** |  | [optional] 
 **stampCardIds** | **int[]** |  | [optional] 
-**deductedStampCardIds** | **int[]** |  | [optional] 
+**stampCards** | [**\DillerAPI\Model\StampCard[]**](StampCard.md) |  | [optional] 
 **details** | [**\DillerAPI\Model\TransactionDetailRequest[]**](TransactionDetailRequest.md) |  | [optional] 
 **departmentId** | **string** | The Id assigned by the retailer | [optional] 
 

@@ -12,7 +12,7 @@
 /**
  * Diller Retailer API
  *
- * The official Diller Retailer API (beta version) <br/> Last Updated: 21-02-2024 14:48
+ * The official Diller Retailer API (beta version) <br/> Last Updated: 27-02-2024 08:24
  *
  * OpenAPI spec version: v2.0
  * 
@@ -74,7 +74,7 @@ class StampCardsApiTest extends TestCase
     /**
      * Test case for cancelStampReservation
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions..
+     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions..
      *
      */
     public function testCancelStampReservation()

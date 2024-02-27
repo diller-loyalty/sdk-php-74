@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **discount** | **double** | Discount amount applied to this product | [optional] 
 **totalPrice** | **double** | Total price after dicount and taxes  Qty x unit price - discount | [optional] 
 **stampCardIds** | **int[]** |  | [optional] 
-**deductedStampCardIds** | **int[]** |  | [optional] 
+**stampCards** | [**\DillerAPI\Model\StampCard[]**](StampCard.md) |  | [optional] 
 **couponCodes** | **string[]** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

@@ -79,7 +79,7 @@ class StampCardsApi
     /**
      * Operation cancelStampReservation
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions.
+     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
      *
      * @param  string $storeId The store Id (required)
      * @param  string $memberId The member Id (required)
@@ -99,7 +99,7 @@ class StampCardsApi
     /**
      * Operation cancelStampReservationWithHttpInfo
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions.
+     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
      *
      * @param  string $storeId The store Id (required)
      * @param  string $memberId The member Id (required)
@@ -185,7 +185,7 @@ class StampCardsApi
     /**
      * Operation cancelStampReservationAsync
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions.
+     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
      *
      * @param  string $storeId The store Id (required)
      * @param  string $memberId The member Id (required)
@@ -208,7 +208,7 @@ class StampCardsApi
     /**
      * Operation cancelStampReservationAsyncWithHttpInfo
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions.
+     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
      *
      * @param  string $storeId The store Id (required)
      * @param  string $memberId The member Id (required)

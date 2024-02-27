@@ -4,7 +4,7 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelStampReservation**](StampCardsApi.md#cancelstampreservation) | **POST** /api/v2.0/stores/{storeId}/members/{memberId}/stamp-cards/{stampId}/cancel-reservation | The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions.
+[**cancelStampReservation**](StampCardsApi.md#cancelstampreservation) | **POST** /api/v2.0/stores/{storeId}/members/{memberId}/stamp-cards/{stampId}/cancel-reservation | The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
 [**getMemberStampCards**](StampCardsApi.md#getmemberstampcards) | **GET** /api/v2.0/stores/{storeId}/members/{memberId}/stamp-cards | Get member active stamp cards
 [**getStoreStamps**](StampCardsApi.md#getstorestamps) | **GET** /api/v2.0/stores/{storeId}/stamp-cards | Retrieves store stamp cards. By default it only retrieves active stamp cards.
 [**reserveStamp**](StampCardsApi.md#reservestamp) | **POST** /api/v2.0/stores/{storeId}/members/{memberId}/stamp-cards/{stampId}/reserve | This endpoint enables users to reserve a stamp for their pending orders,  thereby ensuring that the stamp cannot be used for any other transactions.
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **cancelStampReservation**
 > \DillerAPI\Model\ActionResponse cancelStampReservation($storeId, $memberId, $stampId, $body)
 
-The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release the stamp reservation and avoid making it unavailable for other transactions.
+The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
 
 If the transaction has multiple stamps with the same Id, all of them will be released
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * ConsentTest
+ * StampCardTest
  *
  * PHP version 5
  *
@@ -31,15 +31,15 @@ namespace DillerAPI;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ConsentTest Class Doc Comment
+ * StampCardTest Class Doc Comment
  *
  * @category    Class
- * @description Consent
+ * @description StampCard
  * @package     DillerAPI
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConsentTest extends TestCase
+class StampCardTest extends TestCase
 {
 
     /**
@@ -71,23 +71,30 @@ class ConsentTest extends TestCase
     }
 
     /**
-     * Test "Consent"
+     * Test "StampCard"
      */
-    public function testConsent()
+    public function testStampCard()
     {
     }
 
     /**
-     * Test attribute "gdprAccepted"
+     * Test attribute "stampCardId"
      */
-    public function testPropertyGdprAccepted()
+    public function testPropertyStampCardId()
     {
     }
 
     /**
-     * Test attribute "saveOrderHistory"
+     * Test attribute "action"
      */
-    public function testPropertySaveOrderHistory()
+    public function testPropertyAction()
+    {
+    }
+
+    /**
+     * Test attribute "count"
+     */
+    public function testPropertyCount()
     {
     }
 }
