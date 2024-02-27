@@ -36,4 +36,18 @@ class Gender
     const FEMALE = 'Female';
     const NOT_SHARED = 'NotShared';
     const NON_BINARY = 'NonBinary';
+
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public static function getAllowableEnumValues()
+    {
+        return [
+                self::MALE,
+                self::FEMALE,
+                self::NOT_SHARED,
+                self::NON_BINARY
+        ];
+    }
 }

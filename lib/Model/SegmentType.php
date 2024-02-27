@@ -37,4 +37,19 @@ class SegmentType
     const RADIO = 'Radio';
     const CHECKBOX = 'Checkbox';
     const DROPDOWN = 'Dropdown';
+
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public static function getAllowableEnumValues()
+    {
+        return [
+                self::TEXT,
+                self::DATE_TIME,
+                self::RADIO,
+                self::CHECKBOX,
+                self::DROPDOWN
+        ];
+    }
 }
