@@ -79,11 +79,11 @@ class StampCardsApi
     /**
      * Operation cancelStampReservation
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
+     * The 'cancel-reservation' endpoint is deprecated and should not be used, as it will be removed soon
      *
-     * @param  string $storeId The store Id (required)
-     * @param  string $memberId The member Id (required)
-     * @param  int $stampId The stamp Id to cancel the reservation (required)
+     * @param  string $storeId storeId (required)
+     * @param  string $memberId memberId (required)
+     * @param  int $stampId stampId (required)
      * @param  \DillerAPI\Model\CouponCancelReservationRequest $body body (optional)
      *
      * @throws {{invokerPackage}}\ApiException on non-2xx response
@@ -99,11 +99,11 @@ class StampCardsApi
     /**
      * Operation cancelStampReservationWithHttpInfo
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
+     * The 'cancel-reservation' endpoint is deprecated and should not be used, as it will be removed soon
      *
-     * @param  string $storeId The store Id (required)
-     * @param  string $memberId The member Id (required)
-     * @param  int $stampId The stamp Id to cancel the reservation (required)
+     * @param  string $storeId (required)
+     * @param  string $memberId (required)
+     * @param  int $stampId (required)
      * @param  \DillerAPI\Model\CouponCancelReservationRequest $body (optional)
      *
      * @throws {{invokerPackage}}\ApiException on non-2xx response
@@ -185,11 +185,11 @@ class StampCardsApi
     /**
      * Operation cancelStampReservationAsync
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
+     * The 'cancel-reservation' endpoint is deprecated and should not be used, as it will be removed soon
      *
-     * @param  string $storeId The store Id (required)
-     * @param  string $memberId The member Id (required)
-     * @param  int $stampId The stamp Id to cancel the reservation (required)
+     * @param  string $storeId (required)
+     * @param  string $memberId (required)
+     * @param  int $stampId (required)
      * @param  \DillerAPI\Model\CouponCancelReservationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
@@ -208,11 +208,11 @@ class StampCardsApi
     /**
      * Operation cancelStampReservationAsyncWithHttpInfo
      *
-     * The endpoint /cancel-reservation should be called when a transaction is completed or cancelled to  release all the stamps reserved for that stampId and avoid making it unavailable for other transactions.
+     * The 'cancel-reservation' endpoint is deprecated and should not be used, as it will be removed soon
      *
-     * @param  string $storeId The store Id (required)
-     * @param  string $memberId The member Id (required)
-     * @param  int $stampId The stamp Id to cancel the reservation (required)
+     * @param  string $storeId (required)
+     * @param  string $memberId (required)
+     * @param  int $stampId (required)
      * @param  \DillerAPI\Model\CouponCancelReservationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
@@ -263,9 +263,9 @@ class StampCardsApi
     /**
      * Create request for operation 'cancelStampReservation'
      *
-     * @param  string $storeId The store Id (required)
-     * @param  string $memberId The member Id (required)
-     * @param  int $stampId The stamp Id to cancel the reservation (required)
+     * @param  string $storeId (required)
+     * @param  string $memberId (required)
+     * @param  int $stampId (required)
      * @param  \DillerAPI\Model\CouponCancelReservationRequest $body (optional)
      *
      * @throws \InvalidArgumentException

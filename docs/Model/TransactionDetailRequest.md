@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **taxPercentage** | **double** | Value stored from 0.00 to 100.00 | [optional] 
 **discount** | **double** | Discount amount applied to this product | [optional] 
 **totalPrice** | **double** | Total price after dicount and taxes  Qty x unit price - discount | [optional] 
-**stampCardIds** | **int[]** |  | [optional] 
+**stampCardIds** | **int[]** | WARNING: This property is obsolete. Use the collection property StampCards instead. | [optional] 
 **stampCards** | [**\DillerAPI\Model\StampCard[]**](StampCard.md) |  | [optional] 
 **couponCodes** | **string[]** |  | [optional] 
 

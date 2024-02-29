@@ -12,7 +12,7 @@
 /**
  * Diller Retailer API
  *
- * The official Diller Retailer API (beta version) <br/> Last Updated: 27-02-2024 08:24
+ * The official Diller Retailer API (beta version) <br/> Last Updated: 28-02-2024 11:59
  *
  * OpenAPI spec version: v2.0
  * 

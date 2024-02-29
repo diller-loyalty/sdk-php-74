@@ -577,7 +577,7 @@ class CreateTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets stampCardIds
      *
-     * @param int[] $stampCardIds stampCardIds
+     * @param int[] $stampCardIds WARNING: This property is obsolete. Use the collection property StampCards instead.
      *
      * @return $this
      */

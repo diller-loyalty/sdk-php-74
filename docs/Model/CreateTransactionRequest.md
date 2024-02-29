@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **roundOffAmount** | **double** | Stores the specific value used for rounding calculations | [optional] 
 **origin** | [**\DillerAPI\Model\Origin**](Origin.md) |  | [optional] 
 **couponCodes** | **string[]** |  | [optional] 
-**stampCardIds** | **int[]** |  | [optional] 
+**stampCardIds** | **int[]** | WARNING: This property is obsolete. Use the collection property StampCards instead. | [optional] 
 **stampCards** | [**\DillerAPI\Model\StampCard[]**](StampCard.md) |  | [optional] 
 **details** | [**\DillerAPI\Model\TransactionDetailRequest[]**](TransactionDetailRequest.md) |  | [optional] 
 **departmentId** | **string** | The Id assigned by the retailer | [optional] 
