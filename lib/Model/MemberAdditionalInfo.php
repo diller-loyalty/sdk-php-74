@@ -49,7 +49,8 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
         'firstName' => 'string',
 'lastName' => 'string',
 'email' => 'string',
-'address' => '\DillerAPI\Model\Address'    ];
+'address' => '\DillerAPI\Model\Address',
+'additionalIdentifiers' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -60,7 +61,8 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
         'firstName' => null,
 'lastName' => null,
 'email' => null,
-'address' => null    ];
+'address' => null,
+'additionalIdentifiers' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -92,7 +94,8 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
         'firstName' => 'first_name',
 'lastName' => 'last_name',
 'email' => 'email',
-'address' => 'address'    ];
+'address' => 'address',
+'additionalIdentifiers' => 'additional_identifiers'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -103,7 +106,8 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
         'firstName' => 'setFirstName',
 'lastName' => 'setLastName',
 'email' => 'setEmail',
-'address' => 'setAddress'    ];
+'address' => 'setAddress',
+'additionalIdentifiers' => 'setAdditionalIdentifiers'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,7 +118,8 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
         'firstName' => 'getFirstName',
 'lastName' => 'getLastName',
 'email' => 'getEmail',
-'address' => 'getAddress'    ];
+'address' => 'getAddress',
+'additionalIdentifiers' => 'getAdditionalIdentifiers'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -178,6 +183,7 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['additionalIdentifiers'] = isset($data['additionalIdentifiers']) ? $data['additionalIdentifiers'] : null;
     }
 
     /**
@@ -296,6 +302,30 @@ class MemberAdditionalInfo implements ModelInterface, ArrayAccess
     public function setAddress($address)
     {
         $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets additionalIdentifiers
+     *
+     * @return string[]
+     */
+    public function getAdditionalIdentifiers()
+    {
+        return $this->container['additionalIdentifiers'];
+    }
+
+    /**
+     * Sets additionalIdentifiers
+     *
+     * @param string[] $additionalIdentifiers Specifies an additional identifier value for the member identifier type that is defined at the store level.
+     *
+     * @return $this
+     */
+    public function setAdditionalIdentifiers($additionalIdentifiers)
+    {
+        $this->container['additionalIdentifiers'] = $additionalIdentifiers;
 
         return $this;
     }

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional] 
 **productId** | **string** | The external product id that is non eligible | [optional] 
 **productIdPrefix** | **string** | Prefix for filtering products with matching product IDs. | [optional] 
+**productCategoryId** | **int** | The product category id that identifies all related products as non eligible | [optional] 
 **subsystem** | **string** |  | [optional] 
 **expiresAt** | **string** |  | [optional] 
 

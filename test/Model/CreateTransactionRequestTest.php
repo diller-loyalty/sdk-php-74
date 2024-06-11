@@ -13,7 +13,7 @@
 /**
  * Diller Retailer API
  *
- * The official Diller Retailer API (beta version) <br/> Last Updated: 28-02-2024 11:59
+ * The official Diller Retailer API (beta version) <br/> Last Updated: 2024-06-04T11:45:23
  *
  * OpenAPI spec version: v2.0
  * 
@@ -81,6 +81,13 @@ class CreateTransactionRequestTest extends TestCase
      * Test attribute "externalId"
      */
     public function testPropertyExternalId()
+    {
+    }
+
+    /**
+     * Test attribute "externalReceiptId"
+     */
+    public function testPropertyExternalReceiptId()
     {
     }
 

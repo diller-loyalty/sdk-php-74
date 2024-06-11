@@ -48,6 +48,7 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'productId' => 'string',
 'productIdPrefix' => 'string',
+'productCategoryId' => 'int',
 'description' => 'string',
 'subsystem' => 'string',
 'expiresAt' => 'string'    ];
@@ -60,6 +61,7 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'productId' => null,
 'productIdPrefix' => null,
+'productCategoryId' => 'int32',
 'description' => null,
 'subsystem' => null,
 'expiresAt' => null    ];
@@ -93,6 +95,7 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'productId' => 'product_id',
 'productIdPrefix' => 'product_id_prefix',
+'productCategoryId' => 'product_category_id',
 'description' => 'description',
 'subsystem' => 'subsystem',
 'expiresAt' => 'expires_at'    ];
@@ -105,6 +108,7 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
         'productId' => 'setProductId',
 'productIdPrefix' => 'setProductIdPrefix',
+'productCategoryId' => 'setProductCategoryId',
 'description' => 'setDescription',
 'subsystem' => 'setSubsystem',
 'expiresAt' => 'setExpiresAt'    ];
@@ -117,6 +121,7 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
         'productId' => 'getProductId',
 'productIdPrefix' => 'getProductIdPrefix',
+'productCategoryId' => 'getProductCategoryId',
 'description' => 'getDescription',
 'subsystem' => 'getSubsystem',
 'expiresAt' => 'getExpiresAt'    ];
@@ -181,6 +186,7 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     {
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['productIdPrefix'] = isset($data['productIdPrefix']) ? $data['productIdPrefix'] : null;
+        $this->container['productCategoryId'] = isset($data['productCategoryId']) ? $data['productCategoryId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['subsystem'] = isset($data['subsystem']) ? $data['subsystem'] : null;
         $this->container['expiresAt'] = isset($data['expiresAt']) ? $data['expiresAt'] : null;
@@ -254,6 +260,30 @@ class AddNonEligibleProductRequest implements ModelInterface, ArrayAccess
     public function setProductIdPrefix($productIdPrefix)
     {
         $this->container['productIdPrefix'] = $productIdPrefix;
+
+        return $this;
+    }
+
+    /**
+     * Gets productCategoryId
+     *
+     * @return int
+     */
+    public function getProductCategoryId()
+    {
+        return $this->container['productCategoryId'];
+    }
+
+    /**
+     * Sets productCategoryId
+     *
+     * @param int $productCategoryId The product category id that identifies all related products as non eligible
+     *
+     * @return $this
+     */
+    public function setProductCategoryId($productCategoryId)
+    {
+        $this->container['productCategoryId'] = $productCategoryId;
 
         return $this;
     }

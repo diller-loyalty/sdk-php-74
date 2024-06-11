@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **phone** | [**\DillerAPI\Model\Phone**](Phone.md) |  | 
-**departmentId** | **string** |  | [optional] 
+**departmentId** | **string** |  | 
 **origin** | [**\DillerAPI\Model\Origin**](Origin.md) |  | [optional] 
 **additionalInfo** | [**\DillerAPI\Model\MemberAdditionalInfo**](MemberAdditionalInfo.md) |  | [optional] 
 

@@ -50,6 +50,7 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
 'description' => 'string',
 'productId' => 'string',
 'productIdPrefix' => 'string',
+'productCategoryId' => 'int',
 'subsystem' => 'string',
 'expiresAt' => 'string'    ];
 
@@ -63,6 +64,7 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
 'description' => null,
 'productId' => null,
 'productIdPrefix' => null,
+'productCategoryId' => 'int32',
 'subsystem' => null,
 'expiresAt' => null    ];
 
@@ -97,6 +99,7 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
 'description' => 'description',
 'productId' => 'product_id',
 'productIdPrefix' => 'product_id_prefix',
+'productCategoryId' => 'product_category_id',
 'subsystem' => 'subsystem',
 'expiresAt' => 'expires_at'    ];
 
@@ -110,6 +113,7 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
 'description' => 'setDescription',
 'productId' => 'setProductId',
 'productIdPrefix' => 'setProductIdPrefix',
+'productCategoryId' => 'setProductCategoryId',
 'subsystem' => 'setSubsystem',
 'expiresAt' => 'setExpiresAt'    ];
 
@@ -123,6 +127,7 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
 'description' => 'getDescription',
 'productId' => 'getProductId',
 'productIdPrefix' => 'getProductIdPrefix',
+'productCategoryId' => 'getProductCategoryId',
 'subsystem' => 'getSubsystem',
 'expiresAt' => 'getExpiresAt'    ];
 
@@ -188,6 +193,7 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['productIdPrefix'] = isset($data['productIdPrefix']) ? $data['productIdPrefix'] : null;
+        $this->container['productCategoryId'] = isset($data['productCategoryId']) ? $data['productCategoryId'] : null;
         $this->container['subsystem'] = isset($data['subsystem']) ? $data['subsystem'] : null;
         $this->container['expiresAt'] = isset($data['expiresAt']) ? $data['expiresAt'] : null;
     }
@@ -308,6 +314,30 @@ class NonEligibleProductResponse implements ModelInterface, ArrayAccess
     public function setProductIdPrefix($productIdPrefix)
     {
         $this->container['productIdPrefix'] = $productIdPrefix;
+
+        return $this;
+    }
+
+    /**
+     * Gets productCategoryId
+     *
+     * @return int
+     */
+    public function getProductCategoryId()
+    {
+        return $this->container['productCategoryId'];
+    }
+
+    /**
+     * Sets productCategoryId
+     *
+     * @param int $productCategoryId The product category id that identifies all related products as non eligible
+     *
+     * @return $this
+     */
+    public function setProductCategoryId($productCategoryId)
+    {
+        $this->container['productCategoryId'] = $productCategoryId;
 
         return $this;
     }

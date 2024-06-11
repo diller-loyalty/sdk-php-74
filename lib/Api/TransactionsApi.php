@@ -82,16 +82,16 @@ class TransactionsApi
      * Cancel transaction
      *
      * @param  string $storeId storeId (required)
-     * @param  string $transactionId transactionId (required)
+     * @param  string $externalTransactionId The store&#x27;s transaction unique identifier. Eg. Order-1234 (required)
      * @param  \DillerAPI\Model\CancelationReason $body body (optional)
      *
      * @throws {{invokerPackage}}\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \DillerAPI\Model\ActionResponse
      */
-    public function cancelTransaction($storeId, $transactionId, $body = null)
+    public function cancelTransaction($storeId, $externalTransactionId, $body = null)
     {
-        list($response) = $this->cancelTransactionWithHttpInfo($storeId, $transactionId, $body);
+        list($response) = $this->cancelTransactionWithHttpInfo($storeId, $externalTransactionId, $body);
         return $response;
     }
 
@@ -101,17 +101,17 @@ class TransactionsApi
      * Cancel transaction
      *
      * @param  string $storeId (required)
-     * @param  string $transactionId (required)
+     * @param  string $externalTransactionId The store&#x27;s transaction unique identifier. Eg. Order-1234 (required)
      * @param  \DillerAPI\Model\CancelationReason $body (optional)
      *
      * @throws {{invokerPackage}}\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \DillerAPI\Model\ActionResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelTransactionWithHttpInfo($storeId, $transactionId, $body = null)
+    public function cancelTransactionWithHttpInfo($storeId, $externalTransactionId, $body = null)
     {
         $returnType = '\DillerAPI\Model\ActionResponse';
-        $request = $this->cancelTransactionRequest($storeId, $transactionId, $body);
+        $request = $this->cancelTransactionRequest($storeId, $externalTransactionId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -186,15 +186,15 @@ class TransactionsApi
      * Cancel transaction
      *
      * @param  string $storeId (required)
-     * @param  string $transactionId (required)
+     * @param  string $externalTransactionId The store&#x27;s transaction unique identifier. Eg. Order-1234 (required)
      * @param  \DillerAPI\Model\CancelationReason $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelTransactionAsync($storeId, $transactionId, $body = null)
+    public function cancelTransactionAsync($storeId, $externalTransactionId, $body = null)
     {
-        return $this->cancelTransactionAsyncWithHttpInfo($storeId, $transactionId, $body)
+        return $this->cancelTransactionAsyncWithHttpInfo($storeId, $externalTransactionId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -208,16 +208,16 @@ class TransactionsApi
      * Cancel transaction
      *
      * @param  string $storeId (required)
-     * @param  string $transactionId (required)
+     * @param  string $externalTransactionId The store&#x27;s transaction unique identifier. Eg. Order-1234 (required)
      * @param  \DillerAPI\Model\CancelationReason $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelTransactionAsyncWithHttpInfo($storeId, $transactionId, $body = null)
+    public function cancelTransactionAsyncWithHttpInfo($storeId, $externalTransactionId, $body = null)
     {
         $returnType = '\DillerAPI\Model\ActionResponse';
-        $request = $this->cancelTransactionRequest($storeId, $transactionId, $body);
+        $request = $this->cancelTransactionRequest($storeId, $externalTransactionId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -260,13 +260,13 @@ class TransactionsApi
      * Create request for operation 'cancelTransaction'
      *
      * @param  string $storeId (required)
-     * @param  string $transactionId (required)
+     * @param  string $externalTransactionId The store&#x27;s transaction unique identifier. Eg. Order-1234 (required)
      * @param  \DillerAPI\Model\CancelationReason $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function cancelTransactionRequest($storeId, $transactionId, $body = null)
+    protected function cancelTransactionRequest($storeId, $externalTransactionId, $body = null)
     {
         // verify the required parameter 'storeId' is set
         if ($storeId === null || (is_array($storeId) && count($storeId) === 0)) {
@@ -274,14 +274,14 @@ class TransactionsApi
                 'Missing the required parameter $storeId when calling cancelTransaction'
             );
         }
-        // verify the required parameter 'transactionId' is set
-        if ($transactionId === null || (is_array($transactionId) && count($transactionId) === 0)) {
+        // verify the required parameter 'externalTransactionId' is set
+        if ($externalTransactionId === null || (is_array($externalTransactionId) && count($externalTransactionId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $transactionId when calling cancelTransaction'
+                'Missing the required parameter $externalTransactionId when calling cancelTransaction'
             );
         }
 
-        $resourcePath = '/api/v2.0/stores/{storeId}/transactions/{transactionId}/cancel';
+        $resourcePath = '/api/v2.0/stores/{storeId}/transactions/{externalTransactionId}/cancel';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -298,10 +298,10 @@ class TransactionsApi
             );
         }
         // path params
-        if ($transactionId !== null) {
+        if ($externalTransactionId !== null) {
             $resourcePath = str_replace(
-                '{' . 'transactionId' . '}',
-                ObjectSerializer::toPathValue($transactionId),
+                '{' . 'externalTransactionId' . '}',
+                ObjectSerializer::toPathValue($externalTransactionId),
                 $resourcePath
             );
         }

@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelTransaction**](TransactionsApi.md#canceltransaction) | **POST** /api/v2.0/stores/{storeId}/transactions/{transactionId}/cancel | Cancel transaction
+[**cancelTransaction**](TransactionsApi.md#canceltransaction) | **POST** /api/v2.0/stores/{storeId}/transactions/{externalTransactionId}/cancel | Cancel transaction
 [**createRefundTransaction**](TransactionsApi.md#createrefundtransaction) | **POST** /api/v2.0/stores/{storeId}/members/{memberId}/transactions/{transactionId}/refund | Allows for the partial refund of a previous transaction, without taking into account any coupons or stamp cards applied earlier.
 [**createTransaction**](TransactionsApi.md#createtransaction) | **POST** /api/v2.0/stores/{storeId}/members/{memberId}/transactions | Creates transaction
 
 # **cancelTransaction**
-> \DillerAPI\Model\ActionResponse cancelTransaction($storeId, $transactionId, $body)
+> \DillerAPI\Model\ActionResponse cancelTransaction($storeId, $externalTransactionId, $body)
 
 Cancel transaction
 
@@ -28,11 +28,11 @@ $apiInstance = new DillerAPI\Api\TransactionsApi(
     $config
 );
 $storeId = "storeId_example"; // string | 
-$transactionId = "transactionId_example"; // string | 
+$externalTransactionId = "externalTransactionId_example"; // string | The store's transaction unique identifier. Eg. Order-1234
 $body = new \DillerAPI\Model\CancelationReason(); // \DillerAPI\Model\CancelationReason | 
 
 try {
-    $result = $apiInstance->cancelTransaction($storeId, $transactionId, $body);
+    $result = $apiInstance->cancelTransaction($storeId, $externalTransactionId, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransactionsApi->cancelTransaction: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +45,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **string**|  |
- **transactionId** | **string**|  |
+ **externalTransactionId** | **string**| The store&#x27;s transaction unique identifier. Eg. Order-1234 |
  **body** | [**\DillerAPI\Model\CancelationReason**](../Model/CancelationReason.md)|  | [optional]
 
 ### Return type

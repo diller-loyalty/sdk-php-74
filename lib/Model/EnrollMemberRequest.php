@@ -192,6 +192,9 @@ class EnrollMemberRequest implements ModelInterface, ArrayAccess
         if ($this->container['phone'] === null) {
             $invalidProperties[] = "'phone' can't be null";
         }
+        if ($this->container['departmentId'] === null) {
+            $invalidProperties[] = "'departmentId' can't be null";
+        }
         return $invalidProperties;
     }
 

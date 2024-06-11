@@ -48,6 +48,7 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'reason' => 'string',
 'externalId' => 'string',
+'externalReceiptId' => 'string',
 'createdAt' => '\DateTime',
 'paymentDetails' => '\DillerAPI\Model\PaymentDetails[]',
 'eftPos' => 'string',
@@ -68,6 +69,7 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'reason' => null,
 'externalId' => null,
+'externalReceiptId' => null,
 'createdAt' => 'date-time',
 'paymentDetails' => null,
 'eftPos' => null,
@@ -109,6 +111,7 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'reason' => 'reason',
 'externalId' => 'external_id',
+'externalReceiptId' => 'external_receipt_id',
 'createdAt' => 'created_at',
 'paymentDetails' => 'payment_details',
 'eftPos' => 'eft_pos',
@@ -129,6 +132,7 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
         'reason' => 'setReason',
 'externalId' => 'setExternalId',
+'externalReceiptId' => 'setExternalReceiptId',
 'createdAt' => 'setCreatedAt',
 'paymentDetails' => 'setPaymentDetails',
 'eftPos' => 'setEftPos',
@@ -149,6 +153,7 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
         'reason' => 'getReason',
 'externalId' => 'getExternalId',
+'externalReceiptId' => 'getExternalReceiptId',
 'createdAt' => 'getCreatedAt',
 'paymentDetails' => 'getPaymentDetails',
 'eftPos' => 'getEftPos',
@@ -221,6 +226,7 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     {
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['externalId'] = isset($data['externalId']) ? $data['externalId'] : null;
+        $this->container['externalReceiptId'] = isset($data['externalReceiptId']) ? $data['externalReceiptId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['paymentDetails'] = isset($data['paymentDetails']) ? $data['paymentDetails'] : null;
         $this->container['eftPos'] = isset($data['eftPos']) ? $data['eftPos'] : null;
@@ -302,6 +308,30 @@ class CreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     public function setExternalId($externalId)
     {
         $this->container['externalId'] = $externalId;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalReceiptId
+     *
+     * @return string
+     */
+    public function getExternalReceiptId()
+    {
+        return $this->container['externalReceiptId'];
+    }
+
+    /**
+     * Sets externalReceiptId
+     *
+     * @param string $externalReceiptId externalReceiptId
+     *
+     * @return $this
+     */
+    public function setExternalReceiptId($externalReceiptId)
+    {
+        $this->container['externalReceiptId'] = $externalReceiptId;
 
         return $this;
     }

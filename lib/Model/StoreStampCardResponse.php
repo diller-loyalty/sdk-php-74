@@ -57,6 +57,8 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
 'imageUrl' => 'string',
 'lastStampText' => 'string',
 'productIds' => 'string[]',
+'cardType' => 'string',
+'thresholdAmount' => 'double',
 'validFrom' => '\DateTime',
 'validTo' => '\DateTime'    ];
 
@@ -77,6 +79,8 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
 'imageUrl' => null,
 'lastStampText' => null,
 'productIds' => null,
+'cardType' => null,
+'thresholdAmount' => 'double',
 'validFrom' => 'date-time',
 'validTo' => 'date-time'    ];
 
@@ -118,6 +122,8 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
 'imageUrl' => 'image_url',
 'lastStampText' => 'last_stamp_text',
 'productIds' => 'product_ids',
+'cardType' => 'card_type',
+'thresholdAmount' => 'threshold_amount',
 'validFrom' => 'valid_from',
 'validTo' => 'valid_to'    ];
 
@@ -138,6 +144,8 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
 'imageUrl' => 'setImageUrl',
 'lastStampText' => 'setLastStampText',
 'productIds' => 'setProductIds',
+'cardType' => 'setCardType',
+'thresholdAmount' => 'setThresholdAmount',
 'validFrom' => 'setValidFrom',
 'validTo' => 'setValidTo'    ];
 
@@ -158,6 +166,8 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
 'imageUrl' => 'getImageUrl',
 'lastStampText' => 'getLastStampText',
 'productIds' => 'getProductIds',
+'cardType' => 'getCardType',
+'thresholdAmount' => 'getThresholdAmount',
 'validFrom' => 'getValidFrom',
 'validTo' => 'getValidTo'    ];
 
@@ -230,6 +240,8 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
         $this->container['imageUrl'] = isset($data['imageUrl']) ? $data['imageUrl'] : null;
         $this->container['lastStampText'] = isset($data['lastStampText']) ? $data['lastStampText'] : null;
         $this->container['productIds'] = isset($data['productIds']) ? $data['productIds'] : null;
+        $this->container['cardType'] = isset($data['cardType']) ? $data['cardType'] : null;
+        $this->container['thresholdAmount'] = isset($data['thresholdAmount']) ? $data['thresholdAmount'] : null;
         $this->container['validFrom'] = isset($data['validFrom']) ? $data['validFrom'] : null;
         $this->container['validTo'] = isset($data['validTo']) ? $data['validTo'] : null;
     }
@@ -518,6 +530,54 @@ class StoreStampCardResponse implements ModelInterface, ArrayAccess
     public function setProductIds($productIds)
     {
         $this->container['productIds'] = $productIds;
+
+        return $this;
+    }
+
+    /**
+     * Gets cardType
+     *
+     * @return string
+     */
+    public function getCardType()
+    {
+        return $this->container['cardType'];
+    }
+
+    /**
+     * Sets cardType
+     *
+     * @param string $cardType CardType can have the values 'standard' or 'threshold'
+     *
+     * @return $this
+     */
+    public function setCardType($cardType)
+    {
+        $this->container['cardType'] = $cardType;
+
+        return $this;
+    }
+
+    /**
+     * Gets thresholdAmount
+     *
+     * @return double
+     */
+    public function getThresholdAmount()
+    {
+        return $this->container['thresholdAmount'];
+    }
+
+    /**
+     * Sets thresholdAmount
+     *
+     * @param double $thresholdAmount The minimum transaction amount required to earn a stamp when the stamp card is of type \\'threshold\\'.
+     *
+     * @return $this
+     */
+    public function setThresholdAmount($thresholdAmount)
+    {
+        $this->container['thresholdAmount'] = $thresholdAmount;
 
         return $this;
     }
